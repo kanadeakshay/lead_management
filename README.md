@@ -71,7 +71,7 @@ git push origin <branch-name>
 
 Team members : 
 
-- Vivek Namaye 
-    - [LinkedIn](https://www.linkedin.com/in/akshaykanade/) | [Github](https://github.com/akshay782)
 - Akshay Kanade 
+    - [LinkedIn](https://www.linkedin.com/in/akshaykanade/) | [Github](https://github.com/akshay782)
+- Vivek Namaye 
     - [LinkedIn](https://www.linkedin.com/in/viveknamaye/) | [Github](https://github.com/viveknamaye)
