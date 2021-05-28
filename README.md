@@ -16,7 +16,7 @@ A lead management tool for **CorpsComp** competition organised by IIT BOMBAY.
 ### Introduction
 
 Lead Management is a software solution for **Problem Statement 1** of **CorpsComp** competition organised by IIT BOMBAY in September 2020. 
-You can read the whole problem statement here => [CorpsComp-PS](/docs/problem_statement)
+You can read the whole problem statement here 👉 [CorpsComp-PS](/docs/problem_statement)
 
 ### Features 
 
