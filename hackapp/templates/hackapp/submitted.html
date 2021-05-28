@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted leads</title>
+    <link rel="stylesheet" href="{% static '/css/leadsStyle.css' %}?">
+</head>
+
+<body>
+    <section id="header">
+        <div class="header">
+            <div class="nav-bar">
+                <div class="logo">
+                    <a href="{% url 'dashboard' user %}">
+                        <!-- link to Dashboard -->
+                        <!-- <img src="#" alt=""> -->
+                        <h1>Hackathon</h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <div class="profile-icon">
+                        <a href="{% url 'profile' user %}">
+                            <img src="https://img.icons8.com/color/48/4a90e2/test-account.png" />
+                        </a>
+                    </div>
+                    <div class="arrow">
+                        <button>
+                            <img src="https://img.icons8.com/color/48/4a90e2/expand-arrow--v1.png" />
+                        </button>
+                        <ul>
+                            <li><a href="{% url 'dashboard' user %}">Dashboard</a></li>
+                            <li><a href="{% url 'home' %}">Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="fix"></div>
+    <main>
+        <section class="container">
+            <div class="title">
+                <h1>Leads Submitted</h1>
+            </div>
+            <div class="filter">
+                <form action="#"method = "get">
+                    {{filter.form}}
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="table-content">
+                <table>
+                    <tr>
+                        <th>Sr no</th>
+                        <th>Date/Time</th>
+                        <th>Lead id</th>
+                        <th>Submitted to</th>
+                        <th>status</th>
+                    </tr>
+                    {% for lead in leads %}
+                    <tr>
+                        <td>1</td>
+                        <td>01/03 23:07</td>
+                        <td>{{lead.leadid}}</td>
+                        <td>{{ lead.submitted_to }}</td>
+                        <td class="status">{{lead.status}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </section>
+    </main>
+    <button class="new-lead-btn">
+        <a href="{% url 'newlead' user %}">
+            <svg width="20" height="20" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M26.9286 11.7857H17.6071V2.14286C17.6071 0.959598 16.6795 0 15.5357 0H13.4643C12.3205 0 11.3929 0.959598 11.3929 2.14286V11.7857H2.07143C0.927612 11.7857 0 12.7453 0 13.9286V16.0714C0 17.2547 0.927612 18.2143 2.07143 18.2143H11.3929V27.8571C11.3929 29.0404 12.3205 30 13.4643 30H15.5357C16.6795 30 17.6071 29.0404 17.6071 27.8571V18.2143H26.9286C28.0724 18.2143 29 17.2547 29 16.0714V13.9286C29 12.7453 28.0724 11.7857 26.9286 11.7857Z"
+                    fill="white" />
+            </svg>
+        </a>
+    </button>
+    <script src="{% static 'js/assigned.js' %}"></script>
+</body>
+
+</html>

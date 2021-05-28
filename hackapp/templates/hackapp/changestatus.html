@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit lead</title>
+    <link rel="stylesheet" href="{% static '/css/changestatus.css' %}?">
+</head>
+
+<body>
+    <div class="flex">
+        <div class="inner">
+            <div class="no">
+                <a href="{% url 'update' user=user status=0 id=lead.leadid origin='changestatus' %}">
+                    <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M32.6585 12.1585L24.7835 20.0335L16.7939 12.0439C15.8135 11.0635 14.2347 11.0521 13.2684 12.0184L11.5184 13.7684C10.5521 14.7347 10.5635 16.3135 11.5439 17.2939L19.5335 25.2835L11.6585 33.1585C10.6922 34.1248 10.7036 35.7036 11.684 36.684L13.4594 38.4594C14.4398 39.4398 16.0186 39.4512 16.9849 38.4849L24.8599 30.6099L32.8495 38.5995C33.8299 39.5799 35.4087 39.5913 36.375 38.625L38.125 36.875C39.0913 35.9087 39.0799 34.3299 38.0995 33.3495L30.1099 25.3599L37.9849 17.4849C38.9512 16.5186 38.9398 14.9398 37.9594 13.9594L36.184 12.184C35.2036 11.2036 33.6248 11.1922 32.6585 12.1585Z"
+                            fill="#DC143C" />
+                    </svg>
+                </a>
+            </div>
+            <div class="titlelead">EDIT LEAD</div>
+            <div class="info">
+                <div>name</div>
+                <div>{{lead.name}}</div>
+                <div>project</div>
+                <div>{{lead.project}}</div>
+                <div>segment</div>
+                <div>{{lead.segment}}</div>
+                <div>submitted_by</div>
+                <div>{{lead.submitted_by}}</div>
+                <div>submitted_to</div>
+                <div>{{lead.submitted_to}}</div>
+            </div>
+            <div class="btns">
+                <a href="{% url 'update' user=user status='REJECTED' id=lead.leadid origin='changestatus' %}"
+                    class="reject">Reject</a>
+                <a href="{% url 'update' user=user status='VALIDATED' id=lead.leadid origin='changestatus' %}"
+                    class="validate">Validate</a>
+                <a href="{% url 'update' user=user status='CLOSED' id=lead.leadid origin='changestatus' %}"
+                    class="close">Close</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static '/css/dashboard.css' %}">
+</head>
+
+<body>
+    <section id="header">
+        <div class="header">
+            <div class="nav-bar">
+                <div class="logo">
+                    <a href="{% url 'dashboard' user %}">
+                        <!-- link to Dashboard -->
+                        <!-- <img src="#" alt=""> -->
+                        <h1>Hackathon</h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <div class="profile-icon">
+                        <a href="{% url 'profile' user %}">
+                            <img src="https://img.icons8.com/color/48/4a90e2/test-account.png" />
+                        </a>
+                    </div>
+                    <div class="arrow">
+                        <button>
+                            <img src="https://img.icons8.com/color/48/4a90e2/expand-arrow--v1.png" />
+                        </button>
+                        <ul>
+                            <li><a href="">Dashboard</a></li>
+                            <li><a href="{% url 'home' %}">Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="flex">
+        <section class="navbar"></section>
+        <div class="central">
+            {% for lead in leads %}
+            <div class="item">
+                <div class="first">
+                    <p class="id">{{ lead.id }}</p>
+                    <div class="middle">
+                        <p>{{ lead.submitted_by }}</p>
+                        <p class="arrow">></p>
+                        <p>{{ lead.submitted_to }}</p>
+                    </div>
+                    <p>{{ lead.date }}</p>
+                    <p class="plus"><a href="#">+</a></p>
+                </div>
+                <table class="second none">
+                    <tr class="odd">
+                        <td>from : </td>
+                        <td>{{ lead.submitted_by }}</td>
+                        <td>to : </td>
+                        <td>{{ lead.submitted_to }}</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>OpCo : </td>
+                        <td>{{ lead.sender_opco }}</td>
+                        <td>OpCo : </td>
+                        <td>{{ lead.receiver_opco }}</td>
+                    </tr>
+                    <tr class="even">
+                        <td>lead id : </td>
+                        <td>{{ lead.id }}</td>
+                        <td>time : </td>
+                        <td>01/03 12:03:54</td>
+                    </tr>
+                </table>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <button class="export">
+        <a href="{% url 'export' user %}">EXPORT CSV</a>
+    </button>
+    <script src="{%  static 'js/dashboard.js' %}"></script>
+</body>
+
+</html>

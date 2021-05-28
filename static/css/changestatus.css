@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing : border-box;
+    /* border : 1px solid red; */
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+    height : 100vh;
+    width: 100vw;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    background : #303136;
+}
+
+.inner {
+    width: 350px;
+    background : #24252A;
+    display : flex;
+    flex-direction : column;
+}
+
+.titlelead {
+    font-size : 24px;
+    font-family : Arial, Helvetica, sans-serif;
+    padding : 10px;
+    text-align :  center;
+    font-weight: bold;
+    background : #454857;
+    color: white;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    flex-direction : column;
+    padding : 10px 15px;
+}
+
+.info div {
+    width: 100%;
+    font-size : 20px;
+    padding : 10px;
+}
+
+.info div:nth-child(odd) {
+    color : #82828D;
+}
+
+.info div:nth-child(even) {
+    background : #454857;
+    color : #c5c6ca;
+    border-radius : 7px;
+    font-size : 22px;
+    font-weight: bold;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.btns a {
+    color : white;
+    font-weight: bold;
+    padding : 10px;
+    border-radius : 3px;
+    font-size : 20px;
+}
+
+.reject {
+    background : red;
+}
+
+.validate {
+    background : green;
+}
+
+.close {
+    background : black;
+}
+
+.no {
+    background : #303136;
+    width : 100%;
+    text-align: end;
+}
+
+.no a{
+    padding-right : 10px;
+}

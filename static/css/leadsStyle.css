@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing : border-box;
+}
+
+a{
+    text-decoration :none;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    /* position: relative; */
+    height: 100vh;
+    background-color: #b9c6ae2c;
+
+    /* border: 2px solid green; */
+}
+
+main {
+    min-height : 90vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.title{
+    margin: 30px 0 30px 0;
+}
+.title h1{
+    text-transform: capitalize;
+}
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-radius: 20px;
+    background: #80808850;
+}
+.table-content{
+    width: 80%;
+    border-radius: 20px;
+}
+table tr th, td{
+    text-align: center;
+    width: 2%;
+    padding: 20px;
+    /* background-color: aqua; */
+}
+.status{
+    font-weight: bold;
+}
+table tr{
+    text-transform: capitalize;
+    border-radius: 20px;
+    transition: .4s ease-out background-color;
+}
+tr th{
+    background-color: #1E1E24;
+    color: white;
+}
+table tr:nth-child(1) th:nth-child(1){
+    border-radius : 20px 0 0 0 ;
+}
+table tr:nth-child(1) th:nth-child(5){
+    border-radius : 0 20px 0 0 ;
+}
+table tr:nth-child(even){
+    background: #80808850;
+}
+table tr:nth-child(even):hover{
+    background: #0a07bd50;
+}
+table tr:nth-child(odd):hover{
+    background: #0a07bd50;
+}
+@media only screen and (max-width:600px){
+    .table-content{
+        /* background: red; */
+        width:100%;
+    }
+} 
+
+.new-lead-btn{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgb(0, 75, 145);
+    padding: 20px;
+}
+
+/* nav-bar */
+#header{
+    position: fixed;
+    width: 100vw;
+    /* height: auto; */
+}
+#header .header{
+    /* min-width: 8vw; */
+    background-color: #1E1E24;
+    /* border: 1px solid red; */
+}
+.header .nav-bar{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    /* max-width: 1300px; */
+}
+.header .nav-bar .logo a{
+    color: white;
+}
+#header .nav-list{
+    display: flex;
+    flex-direction: rows;
+}
+.nav-list .profile-icon {
+    padding: 10px;
+    /* border: 1px solid red; */
+
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    /* background-color: white; */
+    justify-content: space-around;
+
+}
+.nav-list .arrow{
+    position: relative;
+}
+.nav-list .arrow ul{
+    width: 100px;
+    height: 120px;
+    /* border: 1px solid red; */
+    background-color: #1E1E24;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    margin-top: 20px;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all .4s ease;
+    z-index: 1;
+}
+.arrow button:focus + ul{
+    opacity: 1;
+    transform: translateY(0);
+}
+.arrow ul a {
+    pointer-events: all;
+}
+.nav-list .arrow ul a{
+    color: white;
+    font-size: 1.1rem;
+}
+.arrow ul li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.arrow ul li:hover{
+    background-color: #58586448;
+}
+.nav-list .arrow button{
+    background-color: transparent;
+    border: none;
+    /* border: 1px solid red; */
+}
+.nav-list .arrow img{
+    width: 30px;
+    height: 30px;
+}
+.fix{
+    height: 72px;
+}
+/* end of nav-bar */
+
+
+/* filter form stylind */
+.filter{
+    width: 100%;
+    display: flex;
+    justify-content : center;
+    /* background : red; */
+    padding : 10px 0;
+}
+
+.filter input {
+    padding : 10px 15px;
+    font-size : 16px;
+    background : rgb(9, 71, 151);
+    color : white;
+    font-weight : bold;
+    border-radius : 8px;
+    font-family : Arial, Helvetica, sans-serif;
+    margin-left : 10px;
+}
+
+.filter form {
+    font-size : 20px;
+}

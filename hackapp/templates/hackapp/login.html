@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static '/css/login.css' %}?">
+</head>
+
+<body>
+    <div class="flex">
+        <div class="main">
+            <div class="left">
+                <img src="{% static '/images/Group 1.png' %}?" alt="">
+            </div>
+            <div class="right">
+                <h1>{{message}}</h1>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div>
+                        <label for="username">
+                            <svg width="31" height="37" viewBox="0 0 31 37" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.5 18.5C20.3922 18.5 24.3571 14.3592 24.3571 9.25C24.3571 4.14082 20.3922 0 15.5 0C10.6078 0 6.64286 4.14082 6.64286 9.25C6.64286 14.3592 10.6078 18.5 15.5 18.5ZM21.7 20.8125H20.5444C19.0083 21.5496 17.2991 21.9688 15.5 21.9688C13.7009 21.9688 11.9987 21.5496 10.4556 20.8125H9.3C4.16562 20.8125 0 25.1629 0 30.525V33.5312C0 35.4463 1.48772 37 3.32143 37H27.6786C29.5123 37 31 35.4463 31 33.5312V30.525C31 25.1629 26.8344 20.8125 21.7 20.8125Z"
+                                    fill="#33AAC4" />
+                            </svg>
+                        </label>
+                        <input type="text" placeholder="username" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="password">
+                            <svg width="31" height="37" viewBox="0 0 28 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.5708 4.87009L23.9556 10.1563C24.1403 10.379 24.1403 10.7423 23.9556 10.965L13.3389 23.7644L8.82778 24.368C8.225 24.4501 7.71458 23.8347 7.78264 23.108L8.28333 17.6695L18.9 4.87009C19.0847 4.64739 19.3861 4.64739 19.5708 4.87009ZM27.4458 3.52803L25.0736 0.668099C24.3347 -0.2227 23.134 -0.2227 22.3903 0.668099L20.6694 2.74272C20.4847 2.96542 20.4847 3.32878 20.6694 3.55148L25.0542 8.83766C25.2389 9.06036 25.5403 9.06036 25.725 8.83766L27.4458 6.76304C28.1847 5.86638 28.1847 4.41883 27.4458 3.52803ZM18.6667 20.2833V26.2493H3.11111V7.4956H14.2819C14.4375 7.4956 14.5833 7.41942 14.6951 7.29049L16.6396 4.94628C17.009 4.50088 16.7465 3.74487 16.2264 3.74487H2.33333C1.04514 3.74487 0 5.00488 0 6.55792V27.187C0 28.74 1.04514 30 2.33333 30H19.4444C20.7326 30 21.7778 28.74 21.7778 27.187V17.9391C21.7778 17.312 21.1507 17.0014 20.7812 17.4409L18.8368 19.7851C18.7299 19.9199 18.6667 20.0957 18.6667 20.2833Z"
+                                    fill="#33AAC4" />
+                            </svg>
+                        </label>
+                        <input type="password" placeholder="password" required id="password" name="password">
+                    </div>
+                    <div class="buttons">
+                        <button type="submit">LOG IN</button>
+                    </div>
+                    <div class="buttons">
+                        <a href="{% url 'signup' %}">SIGN UP</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="{% static '/js/login.js' %}"></script>
+</body>
+
+</html>

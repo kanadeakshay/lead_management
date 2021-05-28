@@ -1,0 +1,241 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #b9c6ae2c;
+}
+/* header section */
+#header{
+    position: fixed;
+    width: 100vw;
+    /* height: auto; */
+}
+#header .header{
+    min-width: 8vh;
+    background-color: #1E1E24;
+    /* border: 1px solid red; */
+}
+.header .nav-bar{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    /* max-width: 1300px; */
+}
+.header .nav-bar .logo a{
+    color: white;
+}
+#header .nav-list{
+    display: flex;
+    flex-direction: rows;
+}
+.nav-list .profile-icon {
+    padding: 10px;
+    /* border: 1px solid red; */
+
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    /* background-color: white; */
+    justify-content: space-around;
+
+}
+.nav-list .arrow{
+    position: relative;
+}
+.nav-list .arrow ul{
+    width: 100px;
+    height: 120px;
+    /* border: 1px solid red; */
+    background-color: #1E1E24;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    margin-top: 20px;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all .4s ease;
+    z-index: 1;
+}
+.arrow button:focus + ul{
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+.nav-list .arrow ul a{
+    color: white;
+    font-size: 1.1rem;
+}
+.arrow ul li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.arrow ul li:hover{
+    background-color: #58586448;
+}
+.nav-list .arrow button{
+    background-color: transparent;
+    border: none;
+    /* border: 1px solid red; */
+}
+.nav-list .arrow img{
+    width: 30px;
+    height: 30px;
+}
+/* end of header section */
+
+/* content section */
+#content{
+    padding-top: 80px;
+    /* border: 1px solid red; */
+
+}
+#content .out-container{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#content .in-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* border: 2px solid green; */
+}
+.in-container .profile-info{
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: row;
+}
+.profile-info .profile-img{
+    /* border: 1px solid red; */
+    margin: 20px;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #35BD9C;
+}
+.profile-info .profile-img h1{
+    font-size: 8rem;
+    color: white;
+    font-weight: lighter;
+}
+.profile-info .profile-name{
+    margin: 20px 20px 20px 10px ;
+    flex: 1;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+.profile-info .profile-name .email-id{
+    padding-top: 5px;
+}
+.profile-info .profile-name .email-id a{
+    color: gray;
+    font-weight: bold;
+}
+.profile-info .profile-name .edit-profile{
+    position: absolute;
+    bottom: 30px;
+}
+.profile-info .profile-name .edit-profile a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-info .profile-name .edit-profile a p{
+    font-size: 1.2rem;
+    margin: 0 0 0 3px;
+}
+/* horizontal line section */
+#content .hr-line{
+    margin-top: 20px;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(167, 160, 160);
+    display: flex;
+    justify-content: center;
+}
+/* end of horizontal line section */
+
+/* new lead button */
+.new-lead-btn .btn{
+    margin: 30px 20px 20px 20px;
+    padding: 10px;
+    background-color: rgb(0, 75, 145);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* border: none; */
+}
+.new-lead-btn .btn h3{
+    margin: 0 0 0 8px;
+}
+/* end of new lead button */
+
+/* rectangle cards section */
+.counters .card{
+    margin: 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #1E1E24;
+}
+.counters .card .heading{
+    /* border: 1px solid red; */
+    margin-left: 10px;
+}
+.counters .card .count {
+    margin-right: 30px;
+}
+.counters .ver-line{
+    height: 60px;
+    width: 1px;
+    background-color: white;
+}
+.counters .card .heading a{
+    color: white;
+}
+.counters .card .count{
+    color: white;
+}
+/* end of rectangle cards section */
+/* end of content section */

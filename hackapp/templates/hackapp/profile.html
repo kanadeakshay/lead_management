@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static '/css/profile.css' %}?">
+</head>
+
+<body>
+    <!-- header -->
+    <section id="header">
+        <div class="header">
+            <div class="nav-bar">
+                <div class="logo">
+                    <a href="{% url 'dashboard' username %}">
+                        <!-- link to Dashboard -->
+                        <!-- <img src="#" alt=""> -->
+                        <h1>Hackathon</h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <div class="profile-icon">
+                        <a href="{% url 'profile' username %}">
+                            <img src="https://img.icons8.com/color/48/4a90e2/test-account.png" />
+                        </a>
+                    </div>
+                    <div class="arrow">
+                        <button>
+                            <img src="https://img.icons8.com/color/48/4a90e2/expand-arrow--v1.png" />
+                        </button>
+                        <ul>
+                            <li><a href="{% url 'dashboard' username %}">Dashboard</a></li>
+                            <li><a href="{% url 'home' %}">Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end ofheader -->
+
+    <!-- profile section -->
+    <section id="content">
+        <div class="out-container">
+            <div class="in-container">
+
+                <!-- img and user name section -->
+                <div class="profile-info">
+                    <div class="profile-img">
+                        <h1>{{ initial }}</h1>
+                    </div>
+                    <div class="profile-name">
+                        <div class="username">
+                            <h2>{{ username }}</h2>
+                        </div>
+                        <div class="email-id">
+                            <a href="#">{{ email }}</a>
+                        </div>
+                        <div class="edit-profile">
+                            <a href="#">
+                                <svg width="20" height="20" viewBox="0 0 28 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.5708 4.87009L23.9556 10.1563C24.1403 10.379 24.1403 10.7423 23.9556 10.965L13.3389 23.7644L8.82778 24.368C8.225 24.4501 7.71458 23.8347 7.78264 23.108L8.28333 17.6695L18.9 4.87009C19.0847 4.64739 19.3861 4.64739 19.5708 4.87009ZM27.4458 3.52803L25.0736 0.668099C24.3347 -0.2227 23.134 -0.2227 22.3903 0.668099L20.6694 2.74272C20.4847 2.96542 20.4847 3.32878 20.6694 3.55148L25.0542 8.83766C25.2389 9.06036 25.5403 9.06036 25.725 8.83766L27.4458 6.76304C28.1847 5.86638 28.1847 4.41883 27.4458 3.52803ZM18.6667 20.2833V26.2493H3.11111V7.4956H14.2819C14.4375 7.4956 14.5833 7.41942 14.6951 7.29049L16.6396 4.94628C17.009 4.50088 16.7465 3.74487 16.2264 3.74487H2.33333C1.04514 3.74487 0 5.00488 0 6.55792V27.187C0 28.74 1.04514 30 2.33333 30H19.4444C20.7326 30 21.7778 28.74 21.7778 27.187V17.9391C21.7778 17.312 21.1507 17.0014 20.7812 17.4409L18.8368 19.7851C18.7299 19.9199 18.6667 20.0957 18.6667 20.2833Z"
+                                        fill="#33AAC4" />
+                                </svg>
+                                <p>edit profile</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of img and user name section -->
+
+                <!-- horizontal line -->
+                <div class="hr-line"></div>
+                <!-- end of horizontal line -->
+
+                <!-- new lead button which is link -->
+                <div class="new-lead-btn">
+                    <a href="{% url 'newlead' username %}">
+                    <button class="btn">
+                        <svg width="20" height="20" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M26.9286 11.7857H17.6071V2.14286C17.6071 0.959598 16.6795 0 15.5357 0H13.4643C12.3205 0 11.3929 0.959598 11.3929 2.14286V11.7857H2.07143C0.927612 11.7857 0 12.7453 0 13.9286V16.0714C0 17.2547 0.927612 18.2143 2.07143 18.2143H11.3929V27.8571C11.3929 29.0404 12.3205 30 13.4643 30H15.5357C16.6795 30 17.6071 29.0404 17.6071 27.8571V18.2143H26.9286C28.0724 18.2143 29 17.2547 29 16.0714V13.9286C29 12.7453 28.0724 11.7857 26.9286 11.7857Z"
+                                fill="white" />
+                        </svg>
+                        <h3>new lead</h3>
+                    </button>
+                </a>
+                </div>
+                <!-- end of new lead button which is link -->
+
+                <!-- rectangel cards with count -->
+                <div class="counters">
+                    <div class="card assinged">
+                        <div class="heading">
+                            <h3><a href="{% url 'assigned' username %}">Leads Assigned</a></h3>
+                        </div>
+                        <div class="ver-line"></div>
+                        <div class="count">
+                            <h2>{{ assigned }}</h2>
+                        </div>
+                    </div>
+                    <div class="card submitted">
+                        <div class="heading">
+                            <h3><a href="{% url 'submitted' username %}">Leads Submitted</a></h3>
+                        </div>
+                        <div class="ver-line"></div>
+                        <div class="count">
+                            <h2>{{ submitted }}</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of rectangel cards with count -->
+
+            </div>
+        </div>
+    </section>
+    <!-- end ofprofile section -->
+</body>
+
+</html>
