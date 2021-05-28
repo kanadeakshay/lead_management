@@ -49,7 +49,7 @@ You can read the whole problem statement here => LINK
 - Read [CODE OF CONDUCT] check [CONTRIBUTING.md] for contributions.
 
 ```bash
-git clone https://github.com/tusharnankani/VocalForLocal.git
+git clone https://github.com/akshay782/lead_management.git
 git checkout -b <branch-name>
 ```
 
