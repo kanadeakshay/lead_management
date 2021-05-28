@@ -10,12 +10,13 @@ A lead management tool for **CorpsComp** competition organised by IIT BOMBAY.
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Local Setup](#local-setup)
+- [Authors](#authors)
 
 
 ### Introduction
 
 Lead Management is a software solution for **Problem Statement 1** of **CorpsComp** competition organised by IIT BOMBAY in September 2020. 
-You can read the whole problem statement here => LINK
+You can read the whole problem statement here => [CorpsComp-PS]('/docs/problem_statement')
 
 ### Features 
 
@@ -64,5 +65,13 @@ python manage.py runserver
 git add .
 git commit -m "message"
 git push origin <branch-name>
+```
 
+### Authors 
 
+Team members : 
+
+- Vivek Namaye 
+    - [LinkedIn](https://www.linkedin.com/in/akshaykanade/) | [Github](https://github.com/akshay782)
+- Akshay Kanade 
+    - [LinkedIn](https://www.linkedin.com/in/viveknamaye/) | [Github](https://github.com/viveknamaye)
