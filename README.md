@@ -1,24 +1,23 @@
 # Lead Management
 
-A lead management tool for Danaher competition organised by IIT BOMBAY.
+A lead management tool for **CorpsComp** competition organised by IIT BOMBAY.
 
-## Table of Contents : 
+## Table 
 
-- [Introduction]
-- [Design]
+- [Introduction](#introduction)
+- [Design](/docs/images/)
 - [Demonstration]
-- [Features]
-- [Technologies Used]
-- [Local Setup]
-- [Authors]
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Local Setup](#local-setup)
 
 
 ### Introduction
 
-Lead Management is a software solution for **Problem Statement 1** of **Danaher** competition organised by IIT BOMBAY in September 2020. 
+Lead Management is a software solution for **Problem Statement 1** of **CorpsComp** competition organised by IIT BOMBAY in September 2020. 
 You can read the whole problem statement here => LINK
 
-## Features 
+### Features 
 
 - **Authentication** : We have added authentication so that the user/employee first need to register on our side using his/her employee/user id and setup a password and then he can login in the website.
 
@@ -34,7 +33,7 @@ You can read the whole problem statement here => LINK
 
 - **Downloadable Data** : User can download all this data by simply clicking on a button. And all the data will be downloaded as a CSV file. 
 
-## Tech Stack 
+### Tech Stack 
 
 - Fronend : 
     - HTML
@@ -43,7 +42,7 @@ You can read the whole problem statement here => LINK
 - Backend : 
     - Django
 
-## Local Setup 
+### Local Setup 
 
 
 - Read [CODE OF CONDUCT] check [CONTRIBUTING.md] for contributions.
