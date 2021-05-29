@@ -67,6 +67,8 @@ git commit -m "message"
 git push origin <branch-name>
 ```
 
+- see user_info.txt file for superuser credentials in case one require.
+
 ### Authors 
 
 Team members : 
