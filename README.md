@@ -2,7 +2,7 @@
 
 A lead management tool for **CorpsComp** competition organised by IIT BOMBAY.
 
-## Table 
+## Table of Contents : 
 
 - [Introduction](#introduction)
 - [Design](/docs/images/)
