@@ -17,6 +17,7 @@ from .functions import *
 
 def dashboard(request, user) :
     data = get_data()
+    data = reversed(data)
     name = Employee.objects.get(name = user).name
     context = {'leads' : data, 'user' : name}
     return render(request, 'hackapp/dashboard.html', context);
