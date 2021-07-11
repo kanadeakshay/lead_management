@@ -1,2 +1,0 @@
-username - cube
-password - c0_208192
