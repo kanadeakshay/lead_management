@@ -69,6 +69,6 @@ git push origin <branch-name>
 Team members :
 
 - Akshay Kanade
-  - [LinkedIn](https://www.linkedin.com/in/akshaykanade/) | [Github](https://github.com/akshay782)
+  - [LinkedIn](https://www.linkedin.com/in/akshaykanade/) | [Github](https://github.com/kanadeakshay)
 - Vivek Namaye
   - [LinkedIn](https://www.linkedin.com/in/viveknamaye/) | [Github](https://github.com/viveknamaye)
