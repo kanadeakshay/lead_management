@@ -72,3 +72,5 @@ Team members :
   - [LinkedIn](https://www.linkedin.com/in/akshaykanade/) | [Github](https://github.com/kanadeakshay)
 - Vivek Namaye
   - [LinkedIn](https://www.linkedin.com/in/viveknamaye/) | [Github](https://github.com/viveknamaye)
+- Prajyot Pawar
+  - [LinkedIn](https://www.linkedin.com/in/prajyot-pawar-579a5834b/) | [Github](https://github.com/prajyotpdev)
